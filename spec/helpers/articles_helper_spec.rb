@@ -13,7 +13,7 @@ require 'rails_helper'
 RSpec.describe ArticlesHelper, type: :helper do
   describe "#posted_on" do
     before do
-      @now = Time.now
+      @now = Time.zone.now
       @article = create(:article)
     end
     subject { helper.posted_on(@article) }

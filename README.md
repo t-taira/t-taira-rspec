@@ -1,24 +1,30 @@
-# README
+## t-taira-rspec
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+$ rspec -f d
 
-Things you may want to cover:
+ArticlesController
+  GET #index
+    should respond with a success status code (2xx)
+    should eq [#<Article id: 1, title: "Article 1", body: "HELLO", created_at: "2017-03-31 21:03:04", updated_at: "...: "Article 2", body: "WORLD", created_at: "2017-03-31 21:03:04", updated_at: "2017-03-31 21:03:04">]
 
-* Ruby version
+ArticlesHelper
+  #posted_on
+    should eq "2017/4/1"
 
-* System dependencies
+Article
+  titleとbodyを指定した場合
+    should eq "初めてのブログ"
+    should eq "ブログはじめました"
+  titleが指定されていない場合
+    should not be valid
+  titleが指定されている場合
+    should be valid
 
-* Configuration
+articles/index.html.erb
+  should match /初めてのブログ/
+  should match /ブログはじめました/
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Finished in 0.04903 seconds (files took 1.67 seconds to load)
+9 examples, 0 failures
+```
