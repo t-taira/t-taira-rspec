@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe ArticlesController, type: :controller do
-  describe "GET #index" do
+  describe 'GET #index' do
     before do
       @article1 = Article.create(
         title: 'Article 1',

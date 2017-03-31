@@ -1,4 +1,4 @@
-## t-taira-rspec
+## rspec
 
 ```
 $ rspec -f d
@@ -27,4 +27,14 @@ articles/index.html.erb
 
 Finished in 0.04903 seconds (files took 1.67 seconds to load)
 9 examples, 0 failures
+```
+
+## rubocop
+
+```
+$ rubocop
+Inspecting 47 files
+...............................................
+
+47 files inspected, no offenses detected
 ```
